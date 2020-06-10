@@ -58,8 +58,8 @@ function displayLocation(latitude, longitude) {
     var latlng = new google.maps.LatLng(latitude, longitude);
 
     geocoder.geocode({
-            'latLng': latlng
-        },
+        'latLng': latlng
+    },
         function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 if (results[0]) {
@@ -125,11 +125,11 @@ function weatherSet(city, country, weather, temp, pressure, windSpeed) {
         $("#weather-video").html("<video autoplay muted loop " + 'id="video-frame"><source  src="videos/thunderstorm.mp4" type="video/mp4"></video>');
     }
     //    $(".container-fluid").css("background", "rgba(0, 0, 0, 0.4)");    
-    $("#city-info").html(city + " " + country);
-    $("#weather-info").html(weather);
-    $("#temp-info").html(temp + " &deg;C");
-    $("#pressure-info").html(pressure + " hPa");
-    $("#wind-speed-info").html(windSpeed + " m/s");
+    $("#city-info").html("🌁 " + city + " " + country);
+    $("#weather-info").html("📡 " + weather);
+    $("#temp-info").html("🌡 " + temp + " &deg;C");
+    $("#pressure-info").html("📈 " + pressure + " hPa");
+    $("#wind-speed-info").html("💨 " + windSpeed + " m/s");
     $("#total-info").show();
     thunderstorm
 }
