@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+body header {
+	text-align: center;
+}
+
+#my-location {
+    text-align: center;
+}
+
+#find-location {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+	font-weight: bold;
+	color: #212529;
+	text-align: center;
+	min-width: 100px;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: transparent;
+	border: 2px solid transparent;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: 0.25rem;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-check-my-location {
+	color: #ffffff;
+	border-color: #2C3E50;
+	background-color: #3498DB;
+}
+
+.btn-submit {
+	color: #ffffff;
+	border-color: #2C3E50;
+	background-color: #E74C3C;
+}
+
+#city-input {
+    width: 200px;
+    margin: auto;
+}
+
+.city-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.display {
+    display: inline-block;
+    text-align: center;
+    width: 100vh;
+    box-sizing: border-box;
+	background-clip: border-box;
+	border: 4px solid transparent;
+	border-radius: 4px;
+}
+
+#video-frame {
+    position: relative;
+    display: inline-block;
+    max-height: 100vh;
+    /* z-index: -1; */
+    max-width: 100%;
+}
+
+#total-info {
+    position: relative;
+    bottom: 0;
+    left: 15%;
+    right: 15%;
+    width: 70%;
+    font-weight: 600;
+    display: none;
+}
