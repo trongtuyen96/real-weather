@@ -6,54 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>Real Weather</title>
 </head>
 
 <body>
     <header>
-        <img src="images/logo.png" alt="Real Weather">
+        <img class ="logo" src="images/logo-trans.png" alt="Real Weather">
     </header>
-
-    <div id="my-location">
-        <p>Check my location weather</p>
-        <button class="btn btn-check-my-location" id="btn-check-location">CHECK</button>
-        <p class="city-name"></p>
-    </div>
-
-    <div id="find-location">
-        <p>Look up location weather</p>
-        <input type="text" id="city-input" placeholder="Search for a city" autofocus>
-        <br>
-        <button class="btn btn-submit" id="btn-submit">SUBMIT</button>
-    </div>
 
     <div class="display">
         <div id="weather-video">
             <video autoplay muted loop id="video-frame">
                 <source src="" type="video/mp4"></video>
         </div>
-        <table class="table" id="total-info">
-            <tr>
-                <td id="city-info"></td>
-            </tr>
-            <tr>
-                <td id="weather-info"></td>
-            </tr>
-            <tr>
-                <td id="temp-info"></td>
-            </tr>
-            <tr>
-                <td id="pressure-info"></td>
-            </tr>
-            <tr>
-                <td id="wind-speed-info"></td>
-            </tr>
-        </table>
+        <hr>
+        <div class="row">
+            <table class="table" id="total-info">
+                <tr>
+                    <td>
+                        <img src="images/city.png" class="icon">
+                    </td>
+                    <td id="city-info">City</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/weather.png" class="icon">
+                    </td>
+                    <td id="weather-info">Weather</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/temperature.png" class="icon">
+                    </td>
+                    <td id="temp-info">Temperature</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/pressure.png" class="icon">
+                    </td>
+                    <td id="pressure-info">Pressure</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="images/wind-speed.png" class="icon">
+                    </td>
+                    <td id="wind-speed-info">Wind speed</td>
+                </tr>
+            </table>
+            
+            <div class="controls">
+                <div id="my-location">
+                    <p>Check my location weather</p>
+                    <button class="btn btn-check-my-location" id="btn-check-location">CHECK</button>
+                    <p class="city-name"></p>
+                </div>
 
-
+                <div id="find-location">
+                    <p>Look up location weather</p>
+                    <input type="text" id="city-input" placeholder="Search for a city">
+                    <br>
+                    <button class="btn btn-find" id="btn-find">FIND</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p>Created by
+            <a href="https://www.linkedin.com/in/tuyennguyen96" target="_blank">Tuyen Nguyen</a>
+        </p>
+        <div id="socials">
+            <a class="sc-btn btn-facebook" id="facebook" href="https://www.facebook.com/tuyen.trong.3" target="_blank">f</a>
+            <a class="sc-btn btn-linkedin" id="linkedin" href="https://www.linkedin.com/in/tuyennguyen96"
+                target="_blank">in</a>
+            <a class="sc-btn btn-github" id="github" href="https://github.com/trongtuyen96" target="_blank">GitHub</a>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
