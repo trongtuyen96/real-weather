@@ -1,6 +1,5 @@
 var x = document.querySelector(".city-name");
-var date = new Date();
-var hour = date.getHours();
+var locationHour;
 
 
 // Event handling for buttons "Check" 
@@ -93,6 +92,7 @@ function getWeather(city) {
             var temp = response.main.temp;
             var pressure = response.main.pressure;
             var windSpeed = response.wind.speed;
+            locationHour = response.getHours;
             console.log(city2 + " " + country + " " + weather + " " + temp + " " + pressure + " " + windSpeed);
             weatherSet(city2, country, weather, temp, pressure, windSpeed);
         });
@@ -103,7 +103,7 @@ function weatherSet(city, country, weather, temp, pressure, windSpeed) {
     if (weather == "Clear") {
         $("#weather-video").html("<video autoplay muted loop " + 'id="video-frame"><source  src="videos/clearNight.mp4" type="video/mp4"></video>');
     }
-    if (weather == "Clear" && (hour <= 20 && hour >= 6)) {
+    if (weather == "Clear" && (locationHour <= 20 && locationHour >= 6)) {
         $("#weather-video").html("<video autoplay muted loop " + 'id="video-frame"><source  src="videos/clearDay.mp4" type="video/mp4"></video>');
     }
     if (weather == "Rain") {
@@ -112,7 +112,7 @@ function weatherSet(city, country, weather, temp, pressure, windSpeed) {
     if (weather == "Clouds") {
         $("#weather-video").html("<video autoplay muted loop " + 'id="video-frame"><source  src="videos/cloudsNight.mp4" type="video/mp4"></video>');
     }
-    if (weather == "Clouds" && (hour <= 20 && hour >= 6)) {
+    if (weather == "Clouds" && (locationHour <= 20 && locationHour >= 6)) {
         $("#weather-video").html("<video autoplay muted loop " + 'id="video-frame"><source  src="videos/clouds.mp4" type="video/mp4"></video>');
     }
     if (weather == "Snow") {

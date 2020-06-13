@@ -16,7 +16,7 @@ body header {
 .display {
     display: inline-block;
     text-align: center;
-    width: 100vh;
+    max-width: 100vh;
     box-sizing: border-box;
     background-clip: border-box;
     border: 10px solid #00aac1;
@@ -26,7 +26,6 @@ body header {
 #video-frame {
     position: relative;
     display: inline-block;
-    max-height: 100vh;
     max-width: 100%;
 }
 
@@ -52,7 +51,7 @@ body header {
 .controls {
     display: inline-block;
     text-align: center;
-    width: 50%;
+    width: 40%;
 }
 
 .icon {
@@ -100,11 +99,12 @@ body header {
 }
 
 .table {
-    border-collapse: collapse
+    border-collapse: collapse;
 }
 
 .table td {
-    border: none
+    border: none;
+    padding: 5%;
 }
 
 hr {
@@ -116,8 +116,8 @@ hr {
     position: relative;
     margin-left: 6%;
     margin-right: 3%;
-    width: 40%;
-    font-size: 1.2rem;
+    width: 48%;
+    /* font-size: 1rem; */
 }
 
 #socials {
