@@ -22,6 +22,7 @@ body header {
     background-clip: border-box;
     border: 10px solid #00aac1;
     border-radius: 10px;
+    margin-bottom: 1%;
 }
 
 #video-frame {
@@ -31,8 +32,8 @@ body header {
 }
 
 .row {
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 #my-location {
