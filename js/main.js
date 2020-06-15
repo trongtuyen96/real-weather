@@ -1,5 +1,10 @@
 var x = document.querySelector(".city-name");
 var locationHour;
+var locationOffsetInSecond;
+var date = new Date();
+var offsetInSecond = date.getTimezoneOffset() * 60;
+var hour = date.getHours();
+
 
 
 // Event handling for buttons "Check" 
@@ -92,7 +97,7 @@ function getWeather(city) {
             var temp = response.main.temp;
             var pressure = response.main.pressure;
             var windSpeed = response.wind.speed;
-            locationHour = response.getHours;
+            locationOffsetInSecond = response.timezone;
             console.log(city2 + " " + country + " " + weather + " " + temp + " " + pressure + " " + windSpeed);
             weatherSet(city2, country, weather, temp, pressure, windSpeed);
         });
@@ -100,6 +105,10 @@ function getWeather(city) {
 
 function weatherSet(city, country, weather, temp, pressure, windSpeed) {
     console.log(weather);
+    locationHour = hour + ((offsetInSecond + locationOffsetInSecond) / 60) / 60;
+    console.log(date);
+    console.log(hour);
+    console.log(locationHour);
     if (weather == "Clear") {
         $("#weather-video").html("<video autoplay muted loop " + 'id="video-frame"><source  src="videos/clearNight.mp4" type="video/mp4"></video>');
     }
@@ -126,10 +135,9 @@ function weatherSet(city, country, weather, temp, pressure, windSpeed) {
     }
 
     $("#city-info").html(city + " " + country);
-    $("#weather-info").html( weather);
+    $("#weather-info").html(weather);
     $("#temp-info").html(temp + " &deg;C");
     $("#pressure-info").html(pressure + " hPa");
     $("#wind-speed-info").html(windSpeed + " m/s");
     $("#total-info").show();
-    thunderstorm
 }
