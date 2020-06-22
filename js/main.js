@@ -133,6 +133,9 @@ function weatherSet(city, country, weather, temp, pressure, windSpeed) {
     if (weather == "Thunderstorm") {
         $("#weather-video").html("<video autoplay muted loop " + 'id="video-frame"><source  src="videos/thunderstorm.mp4" type="video/mp4"></video>');
     }
+    if (weather == "Haze") {
+        $("#weather-video").html("<video autoplay muted loop " + 'id="video-frame"><source  src="videos/haze.mp4" type="video/mp4"></video>');
+    }
 
     $("#city-info").html(city + " " + country);
     $("#weather-info").html(weather);
